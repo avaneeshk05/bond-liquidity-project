@@ -8,7 +8,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Bond } from '@/src/lib/types';
+import { Bond, PortfolioBond } from '@/src/lib/types';
 import { getBonds, getPortfolio } from '@/src/lib/data';
 import BondTable from '@/components/bond-table';
 import BondDetails from '@/components/bond-details';
@@ -17,7 +17,7 @@ import BondChart from '@/components/bond-chart';
 
 export default function DashboardPage() {
   const [bonds, setBonds] = useState<Bond[]>([]);
-  const [portfolio, setPortfolio] = useState<Bond[]>([]);
+  const [portfolio, setPortfolio] = useState<PortfolioBond[]>([]);
   const [selectedBond, setSelectedBond] = useState<Bond | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
