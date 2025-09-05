@@ -10,6 +10,16 @@ This project is a bond trading dashboard built using [Next.js](https://nextjs.or
 - **Interactive Charts**: Visualize bond price trends over time.
 - **Buy/Sell Functionality**: Navigate to dedicated pages for buying or selling bonds.
 
+## Novelties
+
+- **Solving the Liquidity Problem**: The platform directly addresses the long-standing issue of low liquidity in the corporate bond market. It transforms an illiquid asset into a tradable one by enabling fractional ownership.
+
+- **Enabling Fractional Ownership**: This is a core innovation. By allowing investors to buy or sell partial bonds, the platform lowers the barrier to entry for retail investors and provides sellers with an easy way to reduce their exposure without having to offload their entire holding.
+
+- **Automated Interest Distribution via Smart Contracts**: A key logistical challenge of fractional ownership is distributing interest payments. Our approach uses smart contracts to automate this process. When the original bond pays interest, the smart contract automatically calculates and disperses the correct percentage to each fractional owner, ensuring a transparent and trustless system.
+
+- **Hybrid Demat-Blockchain Model**: The system combines the security of traditional demat accounts (where the physical bond remains) with the efficiency and transparency of a decentralized blockchain. This hybrid model allows us to create a dynamic secondary market while maintaining compliance and security.
+
 ## Getting Started
 
 To run the project locally, follow these steps:
