@@ -3,7 +3,6 @@ export interface Bond {
   issuer: string;
   coupon: number;
   maturityDate: string;
-  paymentFrequency: 'Annual' | 'Half-Yearly' | 'Quarterly';
   price: number;
   yield: number;
   rating: string;
@@ -13,13 +12,5 @@ export interface Bond {
 }
 
 export interface PortfolioBond extends Bond {
-  quantity: number;
-}
-
-export interface Offer {
-  id: string;
-  cusip: string;
-  type: 'buy' | 'sell';
-  price: number; // This would be the "clean" price
   quantity: number;
 }

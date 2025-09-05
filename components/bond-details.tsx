@@ -1,6 +1,7 @@
 "use client";
 
 import { Bond } from '@/src/lib/types';
+import Link from 'next/link';
 
 interface BondDetailsProps {
   bond: Bond;
@@ -32,13 +33,22 @@ export default function BondDetails({ bond }: BondDetailsProps) {
           
           <div className="text-gray-500 dark:text-gray-400">Type</div>
           <div className="text-right font-medium text-gray-900 dark:text-white">{bond.type}</div>
+          <div className="text-gray-500 dark:text-gray-400">Payment Frequency</div>
+          <div className="text-right font-medium text-gray-900 dark:text-white">{bond.paymentFrequency}</div>
         </div>
       </div>
       <div className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-b-xl mt-auto">
         <div className="flex space-x-4">
-          <button className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 shadow-md">
+          {/* <button className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 shadow-md">
             Buy
-          </button>
+          </button> */}
+          <Link href={`/buy/${bond.cusip}`} className="flex-1">
+            <button
+              className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 shadow-md"
+            >
+              Buy
+            </button>
+          </Link>
           <button className="flex-1 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-md">
             Sell
           </button>
