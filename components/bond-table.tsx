@@ -1,6 +1,6 @@
 "use client";
 
-import { Bond } from '@/lib/types';
+import { Bond } from '@/src/lib/types';
 
 interface BondTableProps {
   bonds: Bond[];
@@ -54,9 +54,9 @@ export default function BondTable({ bonds, onSelectBond, selectedBondCusip }: Bo
                   <div className="text-sm font-semibold text-gray-900 dark:text-white">{bond.issuer}</div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">{bond.cusip}</div>
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{bond.coupon.toFixed(3)}%</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{bond.coupon.toFixed(2)}%</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-300">{bond.maturityDate}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-right font-mono text-gray-700 dark:text-gray-200">${bond.price.toFixed(2)}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-right font-mono text-gray-700 dark:text-gray-200">₹{bond.price.toFixed(2)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-right font-mono text-green-600 dark:text-green-400">{bond.yield.toFixed(2)}%</td>
                 <td className="px-6 py-4 whitespace-nowrap text-center">
                   <span className="px-2.5 py-0.5 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200">

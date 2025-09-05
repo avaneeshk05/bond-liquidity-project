@@ -1,6 +1,6 @@
 "use client";
 
-import { Bond } from '@/lib/types';
+import { Bond } from '@/src/lib/types';
 
 interface BondChartProps {
   bond: Bond;

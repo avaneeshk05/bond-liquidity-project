@@ -1,6 +1,6 @@
 "use client";
 
-import { Bond } from '@/lib/types';
+import { Bond } from '@/src/lib/types';
 
 interface PortfolioSummaryProps {
   portfolio: Bond[];
@@ -18,7 +18,7 @@ export default function PortfolioSummary({ portfolio }: PortfolioSummaryProps) {
         <div className="flex justify-between items-baseline">
           <span className="text-sm text-gray-500 dark:text-gray-400">Total Value</span>
           <span className="text-2xl font-bold text-gray-900 dark:text-white">
-            ${totalValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            ₹{totalValue.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </span>
         </div>
         <div className="flex justify-between items-baseline">
@@ -37,7 +37,7 @@ export default function PortfolioSummary({ portfolio }: PortfolioSummaryProps) {
               </div>
               <div className="text-sm text-right">
                 <div className="font-mono text-gray-700 dark:text-gray-200">{bond.quantity} units</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">@ ${bond.price.toFixed(2)}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">@ ₹{bond.price.toFixed(2)}</div>
               </div>
             </li>
           ))}

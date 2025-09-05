@@ -1,6 +1,6 @@
 "use client";
 
-import { Bond } from '@/lib/types';
+import { Bond } from '@/src/lib/types';
 
 interface BondDetailsProps {
   bond: Bond;
@@ -22,7 +22,7 @@ export default function BondDetails({ bond }: BondDetailsProps) {
           <div className="text-right font-medium text-gray-900 dark:text-white">{bond.maturityDate}</div>
           
           <div className="text-gray-500 dark:text-gray-400">Price</div>
-          <div className="text-right font-medium text-gray-900 dark:text-white">${bond.price.toFixed(2)}</div>
+          <div className="text-right font-medium text-gray-900 dark:text-white">₹{bond.price.toFixed(2)}</div>
           
           <div className="text-gray-500 dark:text-gray-400">Yield</div>
           <div className="text-right font-medium text-green-600 dark:text-green-400">{bond.yield.toFixed(2)}%</div>

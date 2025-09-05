@@ -8,8 +8,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Bond } from '@/lib/types';
-import { getBonds, getPortfolio } from '@/lib/data';
+import { Bond } from '@/src/lib/types';
+import { getBonds, getPortfolio } from '@/src/lib/data';
 import BondTable from '@/components/bond-table';
 import BondDetails from '@/components/bond-details';
 import PortfolioSummary from '@/components/portfolio-summary';
