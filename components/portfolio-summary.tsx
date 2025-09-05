@@ -1,9 +1,9 @@
 "use client";
 
-import { Bond } from '@/src/lib/types';
+import { PortfolioBond } from '@/src/lib/types';
 
 interface PortfolioSummaryProps {
-  portfolio: Bond[];
+  portfolio: PortfolioBond[];
 }
 
 export default function PortfolioSummary({ portfolio }: PortfolioSummaryProps) {
