@@ -39,3 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Architecuture
 
+<img width="1139" height="1096" alt="diagram-export-9-5-2025-11_03_44-PM" src="https://github.com/user-attachments/assets/7afa12c5-5c23-4f2c-8dc0-0ddcc5dfa551" />
