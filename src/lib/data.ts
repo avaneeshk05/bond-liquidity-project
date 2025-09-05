@@ -129,6 +129,10 @@ const mockOffers: Offer[] = [
     { id: 'offer-4', cusip: 'IN0987654321', type: 'sell', price: 101.60, quantity: 200 },
     { id: 'offer-5', cusip: 'INE115A07RB7', type: 'sell', price: 99.05, quantity: 75 },
     { id: 'offer-6', cusip: 'INE115A07RB7', type: 'sell', price: 99.10, quantity: 125 },
+    // Mock Buy Offers (Bids)
+    { id: 'offer-7', cusip: 'IN1234567890', type: 'buy', price: 102.05, quantity: 70 },
+    { id: 'offer-8', cusip: 'IN1234567890', type: 'buy', price: 102.00, quantity: 30 },
+    { id: 'offer-9', cusip: 'IN0987654321', type: 'buy', price: 101.55, quantity: 150 },
 ];
 
 export const getBonds = async (): Promise<Bond[]> => {
@@ -161,4 +165,20 @@ export const getOffersByCusip = async (cusip: string): Promise<Offer[]> => {
             resolve(mockOffers.filter(offer => offer.cusip === cusip && offer.type === 'sell'));
         }, 300);
     });
+};
+
+export const getBuyOffersByCusip = async (cusip: string): Promise<Offer[]> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(mockOffers.filter(offer => offer.cusip === cusip && offer.type === 'buy'));
+        }, 300);
+    });
+};
+
+export const getPortfolioBondByCusip = async (cusip: string): Promise<PortfolioBond | undefined> => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(mockPortfolio.find(bond => bond.cusip === cusip));
+    }, 200);
+  });
 };

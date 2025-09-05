@@ -49,9 +49,13 @@ export default function BondDetails({ bond }: BondDetailsProps) {
               Buy
             </button>
           </Link>
-          <button className="flex-1 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-md">
-            Sell
-          </button>
+          <Link href={`/sell/${bond.cusip}`} className="flex-1">
+            <button
+              className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-md"
+            >
+              Sell
+            </button>
+          </Link>
         </div>
       </div>
     </div>
