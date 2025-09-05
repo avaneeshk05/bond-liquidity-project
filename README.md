@@ -20,6 +20,10 @@ This project is a bond trading dashboard built using [Next.js](https://nextjs.or
 
 - **Hybrid Demat-Blockchain Model**: The system combines the security of traditional demat accounts (where the physical bond remains) with the efficiency and transparency of a decentralized blockchain. This hybrid model allows us to create a dynamic secondary market while maintaining compliance and security.
 
+## Architecuture
+
+<img width="1139" height="1096" alt="diagram-export-9-5-2025-11_03_44-PM" src="https://github.com/user-attachments/assets/7afa12c5-5c23-4f2c-8dc0-0ddcc5dfa551" />
+
 ## Getting Started
 
 To run the project locally, follow these steps:
@@ -45,10 +49,6 @@ To run the project locally, follow these steps:
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
-## Architecuture
-
-<img width="1139" height="1096" alt="diagram-export-9-5-2025-11_03_44-PM" src="https://github.com/user-attachments/assets/7afa12c5-5c23-4f2c-8dc0-0ddcc5dfa551" />
 
 ## Project Structure
 
