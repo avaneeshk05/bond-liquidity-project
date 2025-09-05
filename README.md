@@ -1,4 +1,4 @@
-# Bond Liquidity Project
+# LiquiBond
 
 This project is a bond trading dashboard built using [Next.js](https://nextjs.org). It provides users with an interactive interface to view, analyze, and manage bonds. The application includes features like bond details, price history charts, and portfolio summaries.
 
