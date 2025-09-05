@@ -1,42 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bond Liquidity Project
+
+This project is a bond trading dashboard built using [Next.js](https://nextjs.org). It provides users with an interactive interface to view, analyze, and manage bonds. The application includes features like bond details, price history charts, and portfolio summaries.
+
+## Features
+
+- **Dashboard**: Displays a list of bonds with key details like issuer, coupon rate, maturity date, and yield.
+- **Bond Details**: View detailed information about a selected bond, including price history and ratings.
+- **Portfolio Summary**: Provides an overview of the user's bond holdings and their total value.
+- **Interactive Charts**: Visualize bond price trends over time.
+- **Buy/Sell Functionality**: Navigate to dedicated pages for buying or selling bonds.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
+   ```bash
+   cd bond-liquidity-project
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## About the Project
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
 ## Architecuture
 
 <img width="1139" height="1096" alt="diagram-export-9-5-2025-11_03_44-PM" src="https://github.com/user-attachments/assets/7afa12c5-5c23-4f2c-8dc0-0ddcc5dfa551" />
+
+## Project Structure
+
+```
+├── app/
+│   ├── buy/[cusip]/
+│   ├── sell/[cusip]/
+│   ├── layout.tsx
+│   ├── page.tsx
+├── components/
+│   ├── bond-chart.tsx
+│   ├── bond-details.tsx
+│   ├── bond-table.tsx
+│   └── portfolio-summary.tsx
+├── src/
+│   └── lib/
+│       ├── data.ts
+│       ├── finance.ts
+│       └── types.ts
+├── public/
+│   ├── assets (SVGs and other static files)
+├── README.md
+├── package.json
+├── tsconfig.json
+```
+
+## Technologies Used
+
+- **Frontend**: Next.js, React, Tailwind CSS
+- **Data Management**: TypeScript for type safety
+- **Charting**: Placeholder for integration with libraries like Recharts or Chart.js
+
+## How to Contribute
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License.
